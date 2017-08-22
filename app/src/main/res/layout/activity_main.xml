@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context="com.mc.modemd.MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/title_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageButton
+                android:id="@+id/title_teb_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/title_seles"
+                android:padding="10dp"
+                android:src="@drawable/ic_home_black" />
+
+            <ImageButton
+                android:id="@+id/title_teb_address"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/title_teb_home"
+                android:background="@color/color_null"
+                android:padding="10dp"
+                android:src="@drawable/ic_location_on_black" />
+
+            <ImageButton
+                android:id="@+id/title_teb_me"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/title_teb_address"
+                android:background="@color/color_null"
+                android:padding="10dp"
+                android:src="@drawable/ic_person_black" />
+
+            <ImageView
+                android:id="@+id/title_teb_more"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_more_horiz_black" />
+
+            <ImageView
+                android:id="@+id/title_teb_search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/title_teb_more"
+                android:padding="10dp"
+                android:src="@drawable/ic_search_black" />
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--<include layout="@layout/include_mian" />-->
+
+
+    <android.support.v4.view.git init
+        android:id="@+id/content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_add_black"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@+id/content_vp"
+        app:layout_anchorGravity="bottom|right"
+        app:layout_behavior="com.mc.modemd.behavior.FabListBehavior"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+
+</android.support.design.widget.CoordinatorLayout>
